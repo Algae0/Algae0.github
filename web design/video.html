@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>vedio</title>
+	<style>
+		/*导航栏*/
+		.head{
+			width: 1920px;
+			height: 45px;
+			position: fixed;
+			z-index:99999;
+			background: rgba(191,213,232,1);
+		}
+		ul{
+			height: 45px;
+			background: rgba(191,213,232,1);
+			opacity: 1;
+			list-style-type: none;
+			margin: 0 auto;
+			padding: 0;
+			z-index:99999;
+			display: table;
+			text-align: center;
+		}
+        li{
+			float: left;
+		}
+        li a{
+			display: inline-block;
+			color: rgba(112,112,112,1);
+			font-family: PingFang SC;
+			font-weight: 400;
+			line-height: 23px;
+			text-align: center;
+			padding: 10px 100px;
+			text-decoration: none;
+			font-size: 20px;
+		}
+        li a:hover{
+			background-color: rgba(94,126,162,1);
+			color: white;
+		}
+		/*头部文字*/
+		.title{
+			width:600px;
+			height:98px;
+			font-size:50px;
+			font-family:PingFang SC;
+			font-weight:400;
+			line-height:80px;
+			color:rgba(112,112,112,1);
+			text-align: center;
+			position: absolute;
+			left: 660px;
+			top:90px;
+		}
+		.word1{
+			width:504px;
+			height:84px;
+			font-size:25px;
+			font-family:PingFang SC;
+			font-weight:400;
+			line-height:45px;
+			color:rgba(112,112,112,1);
+			text-align: center;
+			position: absolute;
+			left: 708px;
+			top: 170px;
+			text-align: center;
+		}
+		/*视频*/
+		.video{
+			width: 1186px;
+			height: 667px;
+			position: absolute;
+			left: 367px;
+			top: 395px;
+		}
+		/*翻页按钮*/
+		.left{
+			width:80px;
+			height:80px;
+			background:rgba(228,237,245,1);
+			box-shadow:  6px 6px 12px rgba(0,0,0,0.16), 
+				-6px -6px 12px #ffffff;
+			border-radius:20px;
+			position:absolute;
+			left: 227px;
+			top: 690px;
+		}
+		.left:hover{
+			border-radius: 20px;
+			background: linear-gradient(145deg, #cdd5dd, #f4feff);
+			box-shadow:  6px 6px 12px #c2c9d0, 
+				-6px -6px 12px #ffffff;
+		}
+		.left:active{
+			border-radius: 20px;
+			background: #E4EDF5;
+			box-shadow: inset 6px 6px 12px #c2c9d0, 
+				inset -6px -6px 12px #ffffff;
+		}
+		.icon1{
+			width: 40px;
+			height: 40px;
+			background-image: url("icon/arrow_left.png");
+			position: absolute;
+			right: 20px;
+			top: 20px;
+		}
+		.right{
+			width:80px;
+			height:80px;
+			background:rgba(228,237,245,1);
+			box-shadow:  6px 6px 12px rgba(0,0,0,0.16), 
+				-6px -6px 12px #ffffff;
+			border-radius:20px;
+			position:absolute;
+			left: 1613px;
+			top: 690px;
+		}
+		.right:hover{
+			border-radius: 20px;
+			background: linear-gradient(145deg, #cdd5dd, #f4feff);
+			box-shadow:  6px 6px 12px #c2c9d0, 
+				-6px -6px 12px #ffffff;
+		}
+		.right:active{
+			border-radius: 20px;
+			background: #E4EDF5;
+			box-shadow: inset 6px 6px 12px #c2c9d0, 
+				inset -6px -6px 12px #ffffff;
+		}
+		.icon2{
+			width: 40px;
+			height: 40px;
+			background-image: url("icon/arrow_right.png");
+			position: absolute;
+			right: 20px;
+			top: 20px;
+		}
+		.designer{
+			width:234px;
+			height:21px;
+			font-size:15px;
+			font-family:PingFang SC;
+			font-weight:400;
+			line-height:21px;
+			color:rgba(112,112,112,1);
+			position: absolute;
+			top: 1200px;
+			left:843px;
+			z-index: 1;
+		}
+		/*整体*/
+		body{
+			background-color: rgba(228,237,245,1);
+			margin: 0;
+			padding: 0;
+			min-height: 1300px;
+		}
+	</style>
+</head> 
+
+<body>
+	<!--导航栏-->
+	<div class="head">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="portfolio.html">Portfolio</a></li>
+			<li><a href="video.html">Video</a></li>
+			<li><a href="others.html">Others</a></li>
+		</ul>
+	</div>
+	<!--头部文字-->
+	<div class="title">The Last Man on Earth</div>
+	<div class="word1">
+	  <p> 
+		  The last man on the earth<br>
+		  set alone in a room,<br>
+		  There was a knock on the door…
+		</p>
+	</div>
+	<!--插入视频链接并设置视频封面-->
+	<div class="video">
+		<video width="1186px" height="667px" poster="pic2/pic-video.jpg" controls="controls">
+			<source src="《The Last Man on Earth》.mp4" type="video/mp4" /></video>
+	</div>
+	<!--左右按钮可以跳转到相应页面-->
+	<a href="portfolio.html" title="上一页">
+		<div class="left">
+			<div class="icon1"></div>
+		</div>
+	</a>
+	<a href="others.html" title="下一页">
+		<div class="right">
+			<div class="icon2"></div>
+		</div>
+	</a>
+	<!--设计者-->
+	<div class="designer">
+		<p>designed by Algae 2020/07/15</p>
+	</div>
+</body>
+</html>
