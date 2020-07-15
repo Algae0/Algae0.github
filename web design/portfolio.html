@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>portfolio</title>
+	<style>
+		/*导航栏*/
+		.head{
+			width: 1920px;
+			height: 45px;
+			position: fixed;
+			z-index:99999;
+			background: rgba(191,213,232,1);
+		}
+		ul{
+			height: 45px;
+			background: rgba(191,213,232,1);
+			opacity: 1;
+			list-style-type: none;
+			margin: 0 auto;
+			padding: 0;
+			z-index:99999;
+			display: table;
+			text-align: center;
+		}
+        li{
+			float: left;
+		}
+        li a{
+			display: inline-block;
+			color: rgba(112,112,112,1);
+			font-family: PingFang SC;
+			font-weight: 400;
+			line-height: 23px;
+			text-align: center;
+			padding: 10px 100px;
+			text-decoration: none;
+			font-size: 20px;
+		}
+        li a:hover{
+			background-color: rgba(94,126,162,1);
+			color: white;
+		}
+		/*头部文字*/
+		.title{
+			width:280px;
+			height:98px;
+			font-size:70px;
+			font-family:PingFang SC;
+			font-weight:400;
+			line-height:98px;
+			color:rgba(112,112,112,1);
+			text-align: center;
+			position: absolute;
+			left: 820px;
+			top:90px;
+		}
+		.word1{
+			width:504px;
+			height:84px;
+			font-size:30px;
+			font-family:PingFang SC;
+			font-weight:400;
+			line-height:65px;
+			color:rgba(112,112,112,1);
+			text-align: center;
+			position: absolute;
+			left: 708px;
+			top: 170px;
+			text-align: center;
+		}
+		/*中间部分*/
+		.middle{
+			width:1330px;
+			height:760px;
+			background:rgba(94,126,162,1);
+			position: absolute;
+			left: 295px;
+			top: 330px;
+			z-index: 1;
+		}
+		.pic{
+			width: 880px;
+			height: 760px;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			z-index: 10;
+		}
+		.word2{
+			width:330px;
+			height:225px;
+			font-size:40px;
+			font-family:PingFang SC;
+			font-weight:400;
+			line-height:75px;
+			color:rgba(228,237,245,1);
+			position: absolute;
+			right: 62px;
+			top: 162px;
+			z-index: 10;
+		}
+		/*图片右侧的文字*/
+		.word3{
+			width:330px;
+			height:225px;
+			font-size:25px;
+			font-family:PingFang SC;
+			font-weight:400;
+			line-height:50px;
+			color:rgba(228,237,245,1);
+			position: absolute;
+			right: 45px;
+			top: 162px;
+		}
+		/*标签*/
+		.label{
+			width:274px;
+			height:83px;
+			background:rgba(94,126,162,1);
+			box-shadow:  6px 6px 12px rgba(0,0,0,0.3), 
+				-6px -6px 12px rgba(255,255,255,0.3);
+			border-radius:21px;
+			position: absolute;
+			right: 86px;
+			top: 523px;
+		}
+		.label:hover{
+			border-radius: 20px;
+			background: linear-gradient(145deg, #557192, #6587ad);
+			box-shadow:  6px 6px 12px #506b8a, 
+				-6px -6px 12px #6c91ba;
+		}
+		.label:active{
+			border-radius: 20px;
+			background: #5E7EA2;
+			box-shadow: inset 6px 6px 12px #506b8a, 
+				inset -6px -6px 12px #6c91ba;
+		}
+		.word4{
+			width:79px;
+			height:44px;
+			font-size:26px;
+			font-family:PingFang SC;
+			font-weight:400;
+			line-height:44px;
+			color:rgba(228,237,245,1);
+			position: absolute;
+			top: 20px;
+			left: 95px;
+		}
+		.designer{
+			width:234px;
+			height:21px;
+			font-size:15px;
+			font-family:PingFang SC;
+			font-weight:400;
+			line-height:21px;
+			color:rgba(112,112,112,1);
+			position: absolute;
+			top: 1200px;
+			left:843px;
+			z-index: 1;
+		}
+		/*整体*/
+		body{
+			background-color: rgba(228,237,245,1);
+			margin: 0;
+			padding: 0;
+			min-height: 1300px;
+		}
+	</style>
+</head>
+
+<body>
+	<!--导航栏-->
+	<div class="head">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="portfolio.html">Portfolio</a></li>
+			<li><a href="video.html">Video</a></li>
+	        <li><a href="others.html">Others</a></li>
+		</ul>                                                  
+	</div>
+	<!--头部文字-->
+	<div class="title">Portfolio</div>
+	<div class="word1">
+	  <p> 每个人都有属于自己的一片森林</p>
+	</div>
+	<!--中间分为左边图片区域和右边文字区域，并可以通过MORE按钮实现图片的翻页-->
+	<div class="middle">
+		<div class="pic">
+			<img src="pic2/1.jpg" id="picId">
+		</div>
+		<div class="word3">
+			<p>
+				你的思想<br>
+				将从你乌黑的眼眸中飞出<br>
+				像鸟儿飞出窝巢<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——泰戈尔
+			</p>
+		</div>
+		<div class="label" onClick="step()">
+			<div class="word4">MORE</div>
+		</div>
+	</div>
+	<!--设计者-->
+	<div class="designer">
+		<p>designed by Algae 2020/07/15</p>
+	</div>
+	
+	<script type="text/javascript">
+	//按钮的点击事件
+	var dom = document.getElementById("picId");
+	var num = 1;
+	function step(){
+		if(num === 1){
+			dom.src ="pic2/2.jpg";
+			num++;
+		}else if(num === 2){
+			dom.src ="pic2/3.jpg"
+			num++;
+		}else if(num === 3){
+			dom.src ="pic2/4.jpg"
+			num++;
+		}else if(num === 4){
+			dom.src ="pic2/5.jpg"
+			num++;
+		}else {
+			dom.src ="pic2/1.jpg";
+			num=1;
+		}
+	}
+	</script>
+</body>
+</html>
