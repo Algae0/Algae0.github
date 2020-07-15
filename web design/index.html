@@ -1,0 +1,461 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>home</title>
+	<style>
+		/*导航栏*/
+		.head{
+			width: 1920px;
+			height: 45px;
+			position: fixed;
+			z-index:99999;
+			background: rgba(191,213,232,1);
+		}
+		ul{
+			height: 45px;
+			background: rgba(191,213,232,1);
+			opacity: 1;
+			list-style-type: none;
+			margin: 0 auto;
+			padding: 0;
+			z-index:99999;
+			display: table;
+			text-align: center;
+		}
+        li{
+			float: left;
+		}
+        li a{
+			display: inline-block;
+			color: rgba(112,112,112,1);
+			font-family: PingFang SC;
+			font-weight: 400;
+			line-height: 23px;
+			text-align: center;
+			padding: 10px 100px;
+			text-decoration: none;
+			font-size: 20px;
+		}
+        li a:hover{
+			background-color: rgba(94,126,162,1);
+			color: white;
+		}
+		/*顶部图片*/
+		.top{
+			width: 1920px;
+			height: 1080px;
+			background-image: url("home-pic/head.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			z-index: 1;
+		}
+		/*welcome等文字*/
+		.welcome{
+			z-index:1;
+			height:240px;
+			position: absolute;
+			left: 414px;
+			right: 414px;
+			top: 650px;
+			text-align: center;
+			font-family:PingFang SC;
+			font-weight:400;
+			font-size: 70px;
+			line-height:98px;
+			color:white;
+		}
+		/*图片1*/
+		.pic1{
+			width: 1020px;
+			height: 550px;
+			background-image: url("home-pic/pic1.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			right: 220px;
+			top: 1223px;
+			z-index: 1;
+		}
+		/*卡片1及其鼠标悬停状态*/
+		.card1{
+			width:245px;
+			height: 410px;
+			background-color: rgba(228,237,245,1);
+			border-radius: 30px;
+			box-shadow:  8px 8px 16px rgba(0,0,0,0.16), 
+				-8px -8px 16px #ffffff;
+			position: absolute;
+			right: 1080px;
+			top: 1143px;
+			z-index: 10;
+		}
+		.card1:hover{
+			border-radius: 30px;
+			background: linear-gradient(145deg, #cdd5dd, #f4feff);
+			box-shadow:  8px 8px 16px #c2c9d0, 
+				-8px -8px 16px #ffffff;
+		}
+		/*段落1*/
+		.word1{
+			width:153px;
+			height: 216px;
+			font-size:18px;
+			font-family:PingFang SC;
+			font-weight:400;
+			line-height:36px;
+			color:rgba(112,112,112,1);
+			position: absolute;
+			left:25px;
+			top:135px;
+		}
+		/*小框1和内部的图标*/
+		.icon1{
+			width: 80px;
+			height: 80px;
+			border-radius: 15px;
+			box-shadow:  6px 6px 12px rgba(0,0,0,0.16), 
+				-6px -6px 12px #ffffff;
+			position: absolute;
+			right:1223px;
+			top:1166px;
+			z-index: 30;
+		}
+		.circle1{
+			width: 40px;
+			height: 40px;
+			background-image: url("icon/time.png");
+			position: absolute;
+			right: 20px;
+			top: 20px;
+		}
+		/*图片2*/
+		.pic2{
+			width: 650px;
+			height: 550px;
+			background-image: url("home-pic/pic2.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			left: 220px;
+			top: 1920px;
+			z-index: 1;
+		}
+		/*卡片2以及鼠标悬停效果*/
+		.card2{
+			width: 360px;
+			height: 345px;
+			background-color: rgba(228,237,245,1);
+			border-radius: 30px;
+			box-shadow:  8px 8px 16px rgba(0,0,0,0.16), 
+				-8px -8px 16px #ffffff;
+			position: absolute;
+			left: 753px;
+			top: 2006px;
+			z-index: 10;
+		}
+		.card2:hover{
+			border-radius: 30px;
+			background: linear-gradient(145deg, #cdd5dd, #f4feff);
+			box-shadow:  8px 8px 16px #c2c9d0, 
+				-8px -8px 16px #ffffff;
+		}
+		/*段落2*/
+		.word2{
+			width: 255px;
+			height: 144px;
+			font-size:18px;
+			font-family:PingFang SC;
+			font-weight:400;
+			line-height:36px;
+			color:rgba(112,112,112,1);
+			position: absolute;
+			left: 25px;
+			top: 130px;
+		}
+		/*小框2和内部的图标*/
+		.icon2{
+			width: 80px;
+			height: 80px;
+			border-radius: 15px;
+			box-shadow:  6px 6px 12px rgba(0,0,0,0.16), 
+				-6px -6px 12px #ffffff;
+			position: absolute;
+			left: 774px;
+			top: 2030px;
+			z-index: 50;
+		}
+		.circle2{
+			width: 40px;
+			height: 40px;
+			background-image: url("icon/image.png");
+			position: absolute;
+			right: 20px;
+			top: 20px;
+		}
+		/*图片3*/
+		.pic3{
+			width: 1150px;
+			height: 560px;
+			background-image: url("home-pic/pic3.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			right: 220px;
+			top: 2648px;
+			z-index: 1;
+		}
+		/*卡片3以及鼠标悬停效果*/
+		.card3{
+			width: 280px;
+			height: 400px;
+			background-color: rgba(228,237,245,1);
+			border-radius: 30px;
+			box-shadow:  8px 8px 16px rgba(0,0,0,0.16), 
+				-8px -8px 16px #ffffff;
+			position: absolute;
+			right: 1233px;
+			top: 2927px;
+			z-index: 50;
+		}
+		.card3:hover{
+			border-radius: 30px;
+			background: linear-gradient(145deg, #cdd5dd, #f4feff);
+			box-shadow:  8px 8px 16px #c2c9d0, 
+				-8px -8px 16px #ffffff;
+		}
+		/*段落3*/
+		.word3{
+			width: 165px;
+			height: 216px;
+			font-size:18px;
+			font-family:PingFang SC;
+			font-weight:400;
+			line-height:36px;
+			color:rgba(112,112,112,1);
+			position: absolute;
+			left: 25px;
+			top: 135px;
+		}
+		/*小框3和内部的图标*/
+		.icon3{
+			width: 80px;
+			height: 80px;
+			border-radius: 15px;
+			box-shadow:  6px 6px 12px rgba(0,0,0,0.16), 
+				-6px -6px 12px #ffffff;
+			position: absolute;
+			right: 1410px;
+			top: 2950px;
+			z-index: 50;
+		}
+		.circle3{
+			width: 40px;
+			height: 40px;
+			background-image: url("icon/international (1).png");
+			position: absolute;
+			right: 20px;
+			top: 20px;
+		}
+		/*图片4*/
+		.pic4{
+			width: 1050px;
+			height: 560px;
+			background-image: url("home-pic/pic4.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			left: 220px;
+			top: 3490px;
+			z-index: 1;
+		}
+		/*卡片4以及鼠标悬停效果*/
+		.card4{
+			width: 335px;
+			height: 415px;
+			background-color: rgba(228,237,245,1);
+			border-radius: 30px;
+			box-shadow:  8px 8px 16px rgba(0,0,0,0.16), 
+				-8px -8px 16px #ffffff;
+			position: absolute;
+			left: 1140px;
+			top: 3700px;
+			z-index: 50;
+		}
+		.card4:hover{
+			border-radius: 30px;
+			background: linear-gradient(145deg, #cdd5dd, #f4feff);
+			box-shadow:  8px 8px 16px #c2c9d0, 
+				-8px -8px 16px #ffffff;
+		}
+		/*段落4*/
+		.word4{
+			width: 242px;
+			height: 216px;
+			font-size:18px;
+			font-family:PingFang SC;
+			font-weight:400;
+			line-height:36px;
+			color:rgba(112,112,112,1);
+			position: absolute;
+			left: 25px;
+			top: 135px;
+		}
+		/*小框4和内部的图标*/
+		.icon4{
+			width: 80px;
+			height: 80px;
+			border-radius: 15px;
+			box-shadow:  6px 6px 12px rgba(0,0,0,0.16), 
+				-6px -6px 12px #ffffff;
+			position: absolute;
+			left: 1165px;
+			top: 3745px;
+			z-index: 50;
+		}
+		.circle4{
+			width: 40px;
+			height: 40px;
+			background-image: url("icon/region.png");
+			position: absolute;
+			right: 20px;
+			top: 20px;
+		}
+		/*底部文字*/
+		.bottom{
+			width:400px;
+			height:200px;
+			font-size:23px;
+			font-family:PingFang SC;
+			font-weight:400;
+			line-height:45px;
+			color:rgba(112,112,112,1);
+			position: absolute;
+			left: 760px;
+			top: 4250px;
+			text-align: center;
+		}
+		.designer{
+			width:234px;
+			height:21px;
+			font-size:15px;
+			font-family:PingFang SC;
+			font-weight:400;
+			line-height:21px;
+			color:rgba(112,112,112,1);
+			position: absolute;
+			top: 4750px;
+			left:843px;
+			z-index: 1;
+		}
+		h1{
+			color: #5E7EA2;
+		}
+		/*整体*/
+		body{
+			background-color: rgba(228,237,245,1);
+			margin: 0;
+			padding: 0;
+			min-height: 4830px;
+		}
+	</style>
+</head>
+
+<body>
+	<!--导航栏-->
+	<div class="head">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="portfolio.html">Portfolio</a></li>
+			<li><a href="video.html">Video</a></li>
+			<li><a href="others.html">Others</a></li>
+		</ul>                                                  
+	</div>
+	<!--顶部文字-->
+	<div class="top">
+		<div class="welcome">
+			<p>Welcome,<br>
+				there is a story for you…</p>
+		</div>
+	</div>
+	<!--图片1和卡片1-->
+	<div class="pic1"></div>
+	<div class="card1">
+		<div class="word1">
+			<p>
+				午后的阳光随意地倚在树叶尖<br>
+				一时没站稳脚跟<br>
+				摇曳着<br>
+				在墙壁间点出唇印
+			</p>
+		</div>
+	</div>
+	<!--卡片上的小标签-->
+	<div class="icon1">
+		<div class="circle1"></div>
+	</div>
+	<!--图片2和卡片2-->
+	<div class="pic2"></div>
+	<div class="card2">
+		<div class="word2">
+			<p>
+				蕨类植物对世界的试探是温柔的<br>
+				小心翼翼的<br>
+				浅浅的探出几根<br>
+				尚未触及春天的发梢就缩了回去
+			</p>
+		</div>
+	</div>
+	<div class="icon2">
+		<div class="circle2"></div>
+	</div>
+	<!--图片3和卡片3-->
+	<div class="pic3"></div>
+	<div class="card3">
+		<div class="word3">
+			<p>
+				张开羽翼<br>
+				不只是鸟类的专长<br>
+				孢子是丛林间的游鱼<br>
+				横行霸道<br>
+				随遇而安<br>
+			</p>
+		</div>
+	</div>
+	<div class="icon3">
+		<div class="circle3"></div>
+	</div>
+	<!--图片4和卡片4-->
+	<div class="pic4"></div>
+	<div class="card4">
+		<div class="word4">
+			<p>
+				森林的浪漫当是松与柏的对酌<br>
+				是朝露同青苔的缠绵<br>
+				当是<br>
+				斜风入林去<br>
+				独携雨痕归
+			</p>
+		</div>
+	</div>
+	<div class="icon4">
+		<div class="circle4"></div>
+	</div>
+	<!--底部文字-->
+	<div class="bottom">
+		<p>
+			藻类<br>
+			地球上最早出现的植物种类<br>
+			原始而简单<br>
+			却进一步演化为了近乎整个植物界<br>
+			如藻类一样渺小<br>
+			却充满希望<br>
+			<h1>Algae</h1>
+		</p>
+	</div>
+	<!--设计者-->
+	<div class="designer">
+		<p>designed by Algae 2020/07/15</p>
+	</div>
+</body>
+</html>
